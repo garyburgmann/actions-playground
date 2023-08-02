@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ws
-          path: ${GITHUB_WORKSPACE}
+          path: ${{ env.GITHUB_WORKSPACE }}
 
   use-repo:
     needs: checkout-repo
