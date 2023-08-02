@@ -21,7 +21,12 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          echo ${{ github.workspace }}
+          echo ${GITHUB_WORKSPACE}
+          echo ${{ env.GITHUB_WORKSPACE }}
+          pwd
+          ls -alh
+          ls ${GITHUB_WORKSPACE}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: container details
         run: |
