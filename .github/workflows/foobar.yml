@@ -27,6 +27,8 @@ jobs:
         run: |
           cat /etc/os-release
           node --version > node_version.txt
+      - name: Archive node version
+        uses: actions/upload-artifact@v3
         with:
           name: node_version
           path: node_version.txt
